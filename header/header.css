@@ -1,0 +1,16 @@
+.header {
+    background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.header__icon {
+    transition: transform 0.5s;
+}
+
+.header__icon:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
