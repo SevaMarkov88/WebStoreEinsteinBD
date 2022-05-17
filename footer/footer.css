@@ -16,8 +16,18 @@
 .footer__list {
   list-style-type: none;
   padding: 0;
+  transition: transform 0.3s;
+}
+
+.footer__list > li:hover {
+  transform: scale(105%);
 }
 
 .footer__list > li {
   margin: 5px;
+}
+
+.footer__list > li > a {
+  text-decoration: none;
+  color: inherit;
 }

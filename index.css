@@ -4,8 +4,14 @@
 /* header */
 @import url(./header/header.css);
 
-/* main */
+/* burger */
+@import url(./burger/burger.css);
 
+/* main */
+@import url(./main/main.css);
+
+/* element */
+@import url(./element/element.css);
 
 /* footer */
 @import url(./footer/footer.css);
