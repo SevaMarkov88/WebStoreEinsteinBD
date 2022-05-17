@@ -1,0 +1,23 @@
+.footer {
+  height: 200px;
+  background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__block {
+  color: white;
+}
+
+.footer__title {
+
+}
+
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__list > li {
+  margin: 5px;
+}
