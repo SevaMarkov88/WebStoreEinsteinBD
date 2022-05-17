@@ -14,3 +14,35 @@
     transform: scale(105%);
     cursor: pointer;
 }
+
+.header__search {
+  display: flex;
+  align-items: center;
+}
+
+.header__button {
+  padding: 0;
+  border: none;
+  background: none;
+  height: 25px;
+  margin-right: -35px;
+  z-index: 1;
+}
+
+.header__button:hover {
+  transform: scale(105%);
+  cursor: pointer;
+}
+
+.header__input {
+  background: rgba(255,255,255,.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0 10px 50px;
+  width: 500px;
+}
+
+.header__input::placeholder {
+  color: white;
+  font-size: 20px;
+}
