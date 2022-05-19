@@ -51,4 +51,8 @@
   .header__input {
     width: auto;
   }
+  .header__icon {
+    width: 24px;
+    height: 24px;
+  }
 }
