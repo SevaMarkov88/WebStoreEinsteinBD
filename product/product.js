@@ -1,7 +1,7 @@
 export default class Product {
     constructor(data, blockTemplate){
         this._data = data;
-        this._productBlock = blockTemplate.querySelector(".product");
+        this._productBlock = blockTemplate.querySelector(".product").cloneNode(true);
     }
 
     _createProduct() {

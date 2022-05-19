@@ -20,9 +20,11 @@ export default class Element {
 
   _setEventListeners() {
     this._cardBlock.addEventListener('click', () => {
+      if (document.querySelector(".product")) {
+        document.querySelector(".product").remove()
+      };
       const productOpen = new Product(this._data, this._blockTemplate);
-      productOpen.renderElement();  
-      document.querySelectorAll(".element").remove();
+      productOpen.renderElement();
     });
   }
 
