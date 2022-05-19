@@ -13,5 +13,8 @@
 /* element */
 @import url(./element/element.css);
 
+/* product */
+@import url(./product/product.css);
+
 /* footer */
 @import url(./footer/footer.css);
