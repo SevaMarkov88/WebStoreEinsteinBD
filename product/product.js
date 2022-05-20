@@ -10,7 +10,7 @@ export default class Product {
         this._productBlock.querySelector(".product__img").alt = this._data.name;
         this._productBlock.querySelector(".product__price").textContent = this._data.price + ' $';
         this._productBlock.querySelector(".product__info__text").textContent = this._data.text;
-        this._productBlock.querySelector(".product__properties").textContent = this._data.propperties;
+        this._productBlock.querySelector(".product__properties").textContent = this._data.properties;
 
         return this._productBlock;
     }
