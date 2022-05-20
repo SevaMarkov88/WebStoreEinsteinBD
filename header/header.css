@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 800px) {
+  .header {
+    height: 200px;
+    flex-direction: column;
+  }
   .header__input {
     width: auto;
   }
