@@ -42,8 +42,8 @@
 }
 
 .product__add-to-cart_inactive {
-  background: rgba(	203, 17, 171, 0.2);
-  border: 2px solid rgba(	203, 17, 171, 0.2);
+  background: rgba(203, 17, 171, 0.2);
+  border: 2px solid rgba(203, 17, 171, 0.2);
   transform: none !important;
   box-shadow: none !important;
 }
@@ -51,4 +51,13 @@
 .product__info {
   margin: 20px auto;
   padding: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .product__title {
+    font-size: 25px;
+  }
+  .product__block {
+    flex-direction: column;
+  }
 }
