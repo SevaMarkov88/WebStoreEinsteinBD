@@ -29,6 +29,8 @@ export default class Product {
             cart.push(this._data);
             this._productBlock.querySelector(".product__add-to-cart").setAttribute('disabled', '');
             this._productBlock.querySelector(".product__add-to-cart").classList.add("product__add-to-cart_inactive");
+            document.querySelector('.cart-count').classList.add('cart-count_visible');
+            document.querySelector(".cart-count text").textContent = cart.length;
             console.log(cart);
         });
     }
