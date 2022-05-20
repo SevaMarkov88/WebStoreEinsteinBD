@@ -1,3 +1,4 @@
+import { cart } from "../cart.js";
 import Popup from "../popup/popup.js";
 
 export default class Product {
@@ -20,10 +21,14 @@ export default class Product {
     }
 
     _addListener() {
-        this._productBlock.addEventListener('click', () => {
+        this._productBlock.querySelector('.product__img').addEventListener('click', () => {
             const openPopup = new Popup(this._data, document.querySelector('.popup'));
             openPopup.openPopup();
         })
+        this._productBlock.querySelector(".product__add-to-cart").addEventListener('click', () => {
+            cart.push(this._data);
+            console.log(cart);
+        });
     }
 
     renderElement() {
