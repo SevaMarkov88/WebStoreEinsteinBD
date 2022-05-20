@@ -27,6 +27,8 @@ export default class Product {
         })
         this._productBlock.querySelector(".product__add-to-cart").addEventListener('click', () => {
             cart.push(this._data);
+            this._productBlock.querySelector(".product__add-to-cart").setAttribute('disabled', '');
+            this._productBlock.querySelector(".product__add-to-cart").classList.add("product__add-to-cart_inactive");
             console.log(cart);
         });
     }

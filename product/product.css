@@ -41,6 +41,13 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
+.product__add-to-cart_inactive {
+  background: rgba(	203, 17, 171, 0.2);
+  border: 2px solid rgba(	203, 17, 171, 0.2);
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 .product__info {
   margin: 20px auto;
   padding: 0 10px;
