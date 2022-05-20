@@ -1,3 +1,5 @@
+import Popup from "../popup/popup.js";
+
 export default class Product {
     constructor(data, blockTemplate){
         this._data = data;
@@ -12,7 +14,16 @@ export default class Product {
         this._productBlock.querySelector(".product__info__text").textContent = this._data.text;
         this._productBlock.querySelector(".product__properties").textContent = this._data.properties;
 
+        this._addListener();
+
         return this._productBlock;
+    }
+
+    _addListener() {
+        this._productBlock.addEventListener('click', () => {
+            const openPopup = new Popup(this._data, document.querySelector('.popup'));
+            openPopup.openPopup();
+        })
     }
 
     renderElement() {
