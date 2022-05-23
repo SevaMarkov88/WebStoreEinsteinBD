@@ -66,7 +66,7 @@
         <path d="M0 0h48v48h-48z" fill="none" />
       </svg>
       <svg
-        class="header__icon"
+        class="header__icon header__cart"
         xmlns="http://www.w3.org/2000/svg"
         width="48"
         height="48"
@@ -77,10 +77,16 @@
           fill="white"
         />
         <path d="M0 0h48v48h-48z" fill="none" />
-      <g class="cart-count">
-        <circle cx="48" cy="1" r="10" fill="red"/>
-        <text x="43" y="6" fill="white" textLength="10" lengthAdjust="spacingAndGlyphs"></text>
-      </g>
+        <g class="cart-count">
+          <circle cx="48" cy="1" r="10" fill="red" />
+          <text
+            x="43"
+            y="6"
+            fill="white"
+            textLength="10"
+            lengthAdjust="spacingAndGlyphs"
+          ></text>
+        </g>
       </svg>
     </header>
 
@@ -132,7 +138,7 @@
     </div>
 
     <div class="popup">
-      <img src="" alt="" class="popup__img">
+      <img src="" alt="" class="popup__img" />
     </div>
 
     <template class="template_card">
@@ -145,14 +151,10 @@
     </template>
 
     <template class="template_product">
-       <section class="product">
+      <section class="product">
         <h2 class="product__title"></h2>
         <div class="product__block">
-          <img
-            src=""
-            alt=""
-            class="product__img"
-          />
+          <img src="" alt="" class="product__img" />
           <div class="product__buy">
             <p class="product__price"></p>
             <button class="product__add-to-cart">Add to cart</button>
@@ -163,6 +165,22 @@
           <p class="product__info__text"></p>
           <h3 class="product__subtitle">Properties</h3>
           <p class="product__properties"></p>
+        </div>
+      </section>
+    </template>
+
+    <template class="template_cart-product">
+      <section class="cart">
+        <h2 class="cart__title">Cart</h2>
+        <div class="cart__product">
+          <img src="" alt="" class="cart__img" />
+          <h3 class="cart__subtitle"></h3>
+          <div class="cart__count">
+            <button class="cart__button btn_minus">-</button>
+            <span class="cart__number">1</span>
+            <button class="cart__button btn_plus">+</button>
+          </div>
+          <div class="cart__price"></div>
         </div>
       </section>
     </template>

@@ -19,5 +19,8 @@
 /* popup */
 @import url(./popup/popup.css);
 
+/* cart */
+@import url(./cart/cart.css);
+
 /* footer */
 @import url(./footer/footer.css);

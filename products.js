@@ -6,7 +6,7 @@ export const products = [
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sapiente est odit vitae natus laboriosam voluptates nemo nam modi nostrum eaque aliquid sint repellat porro iusto dolores in quasi similique!",
     properties:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sapiente est odit vitae natus laboriosam voluptates nemo nam modi nostrum eaque aliquid sint repellat porro iusto dolores in quasi similique!",
-    price: "1 520",
+    price: "1520",
   },
 
   {
