@@ -32,15 +32,17 @@ export default class Cart {
         this._cartBlock.querySelector(".cart__price").textContent =
           price * this._cartBlock.querySelector(".cart__number").textContent +
           " $";
+        cart.forEach((item, index) => {
+          if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
+            cart.splice(index, index + 1);
+            console.log(cart);
+          }
+        });
         if (this._cartBlock.querySelector(".cart__number").textContent == 0) {
           this._cartBlock.remove();
-          cart.forEach((item, index) => {
-            if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
-              cart.splice(index, index + 1);
-              console.log(cart);
-            }
-          })
-          if (cart.length === 0) {location.reload()};
+          if (cart.length === 0) {
+            location.reload();
+          }
         }
       });
     this._cartBlock.querySelector(".btn_plus").addEventListener("click", () => {
@@ -50,6 +52,14 @@ export default class Cart {
       this._cartBlock.querySelector(".cart__price").textContent =
         price * this._cartBlock.querySelector(".cart__number").textContent +
         " $";
+      if (this._cartBlock.querySelector(".cart__number").textContent > 0) {
+        cart.forEach((item) => {
+          if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
+            cart.push(item);
+            console.log(cart);
+          }
+        });
+      }
     });
   }
 
