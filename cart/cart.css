@@ -5,7 +5,8 @@
   border-radius: 10px;
   background: #f6f6f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  margin: 10px;
+  margin: 10px auto;
+  max-width: 1440px;
 }
 
 .cart__product {
