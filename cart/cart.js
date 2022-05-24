@@ -1,3 +1,5 @@
+import { cart } from "../cart.js";
+
 export default class Cart {
   constructor(data, cartTemplate) {
     this._data = data;
@@ -32,7 +34,13 @@ export default class Cart {
           " $";
         if (this._cartBlock.querySelector(".cart__number").textContent == 0) {
           this._cartBlock.remove();
-          location.reload();
+          cart.forEach((item, index) => {
+            if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
+              cart.splice(index, index + 1);
+              console.log(cart);
+            }
+          })
+          if (cart.length === 0) {location.reload()};
         }
       });
     this._cartBlock.querySelector(".btn_plus").addEventListener("click", () => {
