@@ -32,6 +32,7 @@ export default class Cart {
           " $";
         if (this._cartBlock.querySelector(".cart__number").textContent == 0) {
           this._cartBlock.remove();
+          location.reload();
         }
       });
     this._cartBlock.querySelector(".btn_plus").addEventListener("click", () => {
