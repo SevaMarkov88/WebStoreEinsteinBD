@@ -1,4 +1,4 @@
-import { cart } from "../cart.js";
+import { cart } from "../cartArr.js";
 
 export default class Cart {
   constructor(data, cartTemplate) {
@@ -19,6 +19,12 @@ export default class Cart {
     return this._cartBlock;
   }
 
+  _createEmptyCart() {
+    this._cartBlock.querySelector('.cart__title').textContent = this._data.title;
+
+    return this._cartBlock;
+  }
+
   _addListeners() {
     const price = this._cartBlock
       .querySelector(".cart__price")
@@ -35,14 +41,13 @@ export default class Cart {
         cart.forEach((item, index) => {
           if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
             cart.splice(index, index + 1);
-            console.log(cart);
           }
         });
         if (this._cartBlock.querySelector(".cart__number").textContent == 0) {
-          this._cartBlock.remove();
           if (cart.length === 0) {
             location.reload();
           }
+          this._cartBlock.remove();
         }
       });
     this._cartBlock.querySelector(".btn_plus").addEventListener("click", () => {
@@ -56,7 +61,6 @@ export default class Cart {
         cart.forEach((item) => {
           if (item.name == this._cartBlock.querySelector(".cart__img").alt) {
             cart.push(item);
-            console.log(cart);
           }
         });
       }
@@ -65,5 +69,9 @@ export default class Cart {
 
   renderElement() {
     document.querySelector(".main").prepend(this._createCart());
+  }
+
+  renderEmptyCart() {
+    document.querySelector('.main').prepend(this._createEmptyCart());
   }
 }

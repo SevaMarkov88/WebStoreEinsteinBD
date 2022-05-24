@@ -1,4 +1,4 @@
-import { cart } from "../cart.js";
+import { cart } from "../cartArr.js";
 import Popup from "../popup/popup.js";
 
 export default class Product {
