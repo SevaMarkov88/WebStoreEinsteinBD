@@ -41,7 +41,12 @@ export default class Form {
 
   _loginCheck(user) {
     users.forEach((item) => {
-        return JSON.stringify(item) === JSON.stringify(user);
+        if (JSON.stringify(item) === JSON.stringify(user)) {
+            localStorage.setItem('loged', true);
+            console.log('Login Success');
+        } else {
+            console.log('Login failed! User not found...')
+        }
     })
   }
 
