@@ -22,5 +22,8 @@
 /* cart */
 @import url(./cart/cart.css);
 
+/* form */
+@import url(./form/form.css);
+
 /* footer */
 @import url(./footer/footer.css);

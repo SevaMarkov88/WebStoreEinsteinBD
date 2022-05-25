@@ -191,6 +191,33 @@
       </section>
     </template>
 
+    <div class="login">
+      <form action="#" class="form__login" novalidate>
+        <h2 class="login__title">Sign in your account</h2>
+        <label for="email">Enter your email: </label>
+        <input
+          type="email"
+          class="form__input"
+          required
+          placeholder="yourename@mail.com"
+          autocomplete="off"
+        />
+        <span class="input-email-error popup__span-error"></span>
+        <label for="password">Enter your password: </label>
+        <input
+          type="password"
+          class="form__input"
+          required
+          placeholder="**********"
+          autocomplete="off"
+        />
+        <span class="input-password-error popup__span-error"></span>
+        <button class="form__button" type="submit" aria-label="SignIn">
+          SignIn
+        </button>
+      </form>
+    </div>
+
     <script type="module" src="./index.js"></script>
     <script type="module" src="./products.js"></script>
     <script type="module" src="./product/product.js"></script>
