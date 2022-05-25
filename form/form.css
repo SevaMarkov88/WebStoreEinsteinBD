@@ -27,6 +27,7 @@
   justify-content: space-around;
   background: white;
   border-radius: 25px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
 }
 
 .login__title {
@@ -52,6 +53,7 @@
   padding: 10px;
   border: none;
   border-radius: 15px;
+  transition: all .3s;
 }
 
 .form__button:hover {
