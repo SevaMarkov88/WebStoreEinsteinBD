@@ -4,8 +4,7 @@ import Element from "./element/element.js";
 import Form from "./form/form.js";
 import FormValidator from "./form/FormValidator.js";
 import { products } from "./products.js";
-import { cart } from "./cartArr.js";
-import { cartEmpty } from "./cartArr.js";
+import { cart, cartEmpty } from "./cartArr.js";
 import { config } from "./form/configValidation.js";
 
 const burgerIcon = document.querySelector(".header__icon_burger");
@@ -13,9 +12,7 @@ const burgerBlock = document.querySelector(".burger");
 const productTemplate = document.querySelector(".template_product").content;
 const cardTemplate = document.querySelector(".template_card").content;
 const cartTemplate = document.querySelector(".template_cart-product").content;
-const cartTemplateEmpty = document.querySelector(
-  ".template_cart-empty"
-).content;
+const cartTemplateEmpty = document.querySelector(".template_cart-empty").content;
 const cartIcon = document.querySelector(".header__cart");
 const loginBlock = document.querySelector(".login");
 const formBlock = document.querySelector(".form__login");
