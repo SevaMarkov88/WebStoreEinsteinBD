@@ -4,19 +4,22 @@ export default class Form {
   }
 
   openForm() {
-    this._formBlock.classList.add("login__opened");
+    this._formBlock.classList.add("login_opened");
     this._addListener();
   }
 
   _closeForm() {
-    this._formBlock.classList.remove("login__opened");
+    this._formBlock.classList.remove("login_opened");
     this._removeListener();
   }
 
   _addListener() {
     document.addEventListener("keydown", (evt) => this._handleEscClose(evt));
     this._formBlock.addEventListener("click", (evt) => {
-      if (!evt.target.classList.contains("form__login")) {
+      if (
+        !evt.target.classList.contains("form__login") &&
+        !evt.target.classList.contains("form__input")
+      ) {
         this._closeForm();
       }
     });
@@ -25,7 +28,10 @@ export default class Form {
   _removeListener() {
     document.removeEventListener("keydown", (evt) => this._handleEscClose(evt));
     this._formBlock.removeEventListener("click", (evt) => {
-      if (!evt.target.classList.contains("form__login")) {
+      if (
+        !evt.target.classList.contains("form__login") &&
+        !evt.target.classList.contains("form__input")
+      ) {
         this._closeForm();
       }
     });

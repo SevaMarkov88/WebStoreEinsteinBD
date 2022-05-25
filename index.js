@@ -2,9 +2,11 @@ import Burger from "./burger/burger.js";
 import Cart from "./cart/cart.js";
 import Element from "./element/element.js";
 import Form from "./form/form.js";
+import FormValidator from './form/FormValidator.js';
 import { products } from "./products.js";
 import { cart } from './cartArr.js';
 import { cartEmpty } from "./cartArr.js";
+import { config } from './form/configValidation.js'
 
 const burgerIcon = document.querySelector(".header__icon_burger");
 const burgerBlock = document.querySelector(".burger");
@@ -13,8 +15,12 @@ const cardTemplate = document.querySelector(".template_card").content;
 const cartTemplate = document.querySelector(".template_cart-product").content;
 const cartTemplateEmpty = document.querySelector(".template_cart-empty").content;
 const cartIcon = document.querySelector(".header__cart");
-const formBlock = document.querySelector('.login');
+const loginBlock = document.querySelector('.login');
+const formBlock = document.querySelector('.form__login');
 const accountIcon = document.querySelector('.header__account');
+
+const formBlockValidation = new FormValidator(config, formBlock);
+formBlockValidation.enableValidation();
 
 products.forEach((item) => {
   const element = new Element(item, cardTemplate, productTemplate);
@@ -44,6 +50,6 @@ cartIcon.addEventListener("click", () => {
 
 
 accountIcon.addEventListener('click', () => {
-  const form = new Form(formBlock);
+  const form = new Form(loginBlock);
   form.openForm();
 })
