@@ -1,6 +1,7 @@
 import Burger from "./burger/burger.js";
 import Cart from "./cart/cart.js";
 import Element from "./element/element.js";
+import Form from "./form/form.js";
 import { products } from "./products.js";
 import { cart } from './cartArr.js';
 import { cartEmpty } from "./cartArr.js";
@@ -12,6 +13,8 @@ const cardTemplate = document.querySelector(".template_card").content;
 const cartTemplate = document.querySelector(".template_cart-product").content;
 const cartTemplateEmpty = document.querySelector(".template_cart-empty").content;
 const cartIcon = document.querySelector(".header__cart");
+const formBlock = document.querySelector('.login');
+const accountIcon = document.querySelector('.header__account');
 
 products.forEach((item) => {
   const element = new Element(item, cardTemplate, productTemplate);
@@ -38,3 +41,9 @@ cartIcon.addEventListener("click", () => {
     setTimeout(() => {location.reload()}, 3000);
   }
 });
+
+
+accountIcon.addEventListener('click', () => {
+  const form = new Form(formBlock);
+  form.openForm();
+})

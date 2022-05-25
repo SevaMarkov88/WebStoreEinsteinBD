@@ -1,4 +1,6 @@
 .login {
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +11,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.login__opened {
+    visibility: visible;
+    opacity: 1;
 }
 
 .form__login {

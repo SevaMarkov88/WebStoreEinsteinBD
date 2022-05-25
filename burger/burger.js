@@ -16,7 +16,7 @@ export default class Burger {
   _addListener() {
     document.addEventListener("keydown", (evt) => this._handleEscClose(evt));
     this._burger.addEventListener("click", (evt) => {
-      if (evt.target !== evt.target.classList.contains("burger__links")) {
+      if (!evt.target.classList.contains("burger__links")) {
         this.closeBurger();
       }
     });
